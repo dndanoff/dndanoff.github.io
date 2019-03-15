@@ -1,0 +1,33 @@
+# top level stuff you probably don't need to touch
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables", "fenced_code_blocks"]
+rdiscount:
+  extensions: [smart]
+permalink: /:title.html
+paginate: 5
+plugins: [jekyll-paginate]
+port: 4000
+safe: true
+
+exclude:
+- vendor
+- README.md
+- .bundle
+- .git
+
+#custom collections
+collections:
+  - projects
+
+# edit here to achieve your personal greatness
+url: http://dndanoff.github.io/
+baseurl: /
+title: My Personal Page
+author: Denis Danoff
+description: My ersonal space on the internet
+avatar: profile.png
+email: denis.danof@egmail.com
+github: dndanoff
+linkedin: username
+analytics_code: UA-136307950-1

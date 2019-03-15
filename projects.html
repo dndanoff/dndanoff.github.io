@@ -1,0 +1,23 @@
+---
+layout: main
+title: Projects
+---
+
+<div class="container">
+	<h1 class="text-center">Projects</h1>
+	{% assign collections = site.projects | sort: 'sequence' %}
+	{% for project in site.projects %}
+		<div class="row">
+			 <div class="col-sm-4 col-md-4 col-lg-4">
+				 <h5 class="text-left">
+					<i class="fa fa-github"></i>&nbsp;&nbsp;<strong><a href="{{project.url}}">{{project.title}}</a></strong>
+				 </h5>
+			 </div>
+			 <div class="col-sm-8 col-md-8 col-lg-8">
+				 <h5 class="text-left">
+					{{project.desc}}
+				 </h5>
+			 </div>
+		</div>
+	{% endfor %}
+</div>

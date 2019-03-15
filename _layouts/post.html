@@ -1,0 +1,44 @@
+---
+layout: main
+---
+
+<div class="container">
+	<div class="post-title">
+		<h1>
+		  <strong>{{ page.title }}</strong>
+		</h1>
+	</div>
+	<div class="post-info">
+		<h4>
+		{{ page.date | date: "%B %e, %Y" }}
+			&nbsp;&nbsp;
+			{% if page.tags %}
+				{% for tag in page.tags %}
+				 <span class="badge badge-secondary">{{ tag }}</span>
+				{% endfor %}
+			{% endif %}
+		</h4>
+	</div>
+<hr>
+	<div class="post-content">
+	  {{ content }}
+	</div>
+	<hr>
+   <div class="related-posts">
+	   <h5>Related Posts</h5>
+	   {% for post in site.related_posts limit:3 %}
+			<div class="row">
+				 <div class="col-sm-4 col-md-4 col-lg-4">
+					 <h6 class="text-right">
+						{{ post.date | date: "%B %e, %Y" }}
+					 </h6>
+				 </div>
+				 <div class="col-sm-8 col-md-8 col-lg-8">
+					 <h6 class="text-left">
+						<strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
+					 </h6>
+				 </div>
+			</div>
+		{% endfor %}
+   </div>
+</div>
