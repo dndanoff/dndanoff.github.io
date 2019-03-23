@@ -1,0 +1,16 @@
+---
+layout: main
+title: Books
+---
+
+<div class="container">
+	<h1 class="text-center">Books that I have read and value</h1>
+	{% assign collections = site.books | sort: 'sequence' %}
+	{% for book in site.books %}
+		<div class="row">
+			 <h2 class="text-left">
+				{{book.title}}
+			 </h2>
+		</div>
+	{% endfor %}
+</div>

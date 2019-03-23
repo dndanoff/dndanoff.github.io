@@ -18,7 +18,10 @@ exclude:
 
 #custom collections
 collections:
-  - projects
+  projects:
+  books:
+  posts:
+    permalink: /blog/:name
 
 # edit here to achieve your personal greatness
 url: https://dndanoff.github.io/
